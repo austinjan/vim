@@ -1,75 +1,7 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=670
 
-The visincr plugin facilitates making a column of increasing or decreasing
-numbers, dates, or daynames.
+各式各樣的遞增
 
-First, select a column using visual-block (ctrl-v) and move the cursor.
-
-Second, choose what sort of incremented list you want:
-
-    :I [#]  Will use the first line's number as a starting point to build
-            a column of increasing numbers (or decreasing numbers if the
-        increment is negative).
-        Default increment: 1
-        Justification    : left (will pad on the right)
-
-    :II [# [zfill]]  Will use the first line's number as a starting point
-        to build a column of increasing numbers (or decreasing numbers
-        if the increment is negative).
-        Default increment: 1
-        Justification    : right (will pad on the left)
-        Zfill            : left padding will be done with the given
-                           character, typically a zero.
-
-    :IYMD [#]    year/month/day
-    :IMDY [#]    month/day/year
-    :IDMY [#]    day/month/year
-        Will use the starting line's date to construct an increasing
-        or decreasing list of dates, depending on the sign of the
-        number.
-        Default increment: 1 (in days)
-
-    :ID [#] Will produce an increasing/decreasing list of daynames.  Three-letter
-            daynames will be used if the first day on the first line is a three
-        letter dayname; otherwise, full names will be used.
-
-    :IO [#]
-    :IIO [#] [zfill]
-        Like :I and :II, except visincr creates octal numbers.
-
-    :IR [#]
-    :IIR [#] [zfill]
-        Like :I and :II, except visincr uses Roman numerals.  Negative and
-        zero counts are not supported for Roman numerals.
-
-    :IX [#]
-    :IIX [#] [zfill]
-        Like :I and :II, except visincr creates hexadecimal numbers.
-
-    -------------------
-    EXTRA NOTES
-    -------------------
-    For :I :II :IO :IIO :IR :IIR :
-        If the visual block is ragged on the right-hand side (as can
-        easily happen when the "$" is used to select the
-        right-hand-side), the block will have spaces appended to
-        straighten it out.  If the string length of the count exceeds
-        the visual-block, then additional spaces will be inserted as
-        needed.  Leading tabs are handled by using virtual column
-        calculations.
-
-    For :IR and :IIR :
-        Since Roman numerals vary considerably in their lengths for
-        nearby numbers, an additional two spaces will be included.
-
-    For :IYMD, :IMDY, and IDMY:
-        You'll need the <calutil.vim> plugin, available as
-        "Calendar Utilities" under the following url:
-
-        http://mysite.verizon.net/astronaut/vim/index.html#CALUTIL
-
-Help is included, too -- check out  :he visincr-examples to see
-even more examples of each command in action.
 
 Examples:
 

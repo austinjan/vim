@@ -1,0 +1,9 @@
+Vim Setting file
+
+##############
+System Require
+##############
+
+1. Command-T 需要 Ruby 支援，請先確定系統已經安裝ruby (  http://www.ruby-lang.org/en/downloads/ )
+
+2. Windows 安裝 ruby 的時候請勾選 "Add Ruby executables to your PATH
